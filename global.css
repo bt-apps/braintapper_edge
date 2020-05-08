@@ -1,0 +1,5 @@
+[type="form"] {
+  padding: var(--spacing-s); }
+
+span[spacer] {
+  padding: 0px 4px; }
