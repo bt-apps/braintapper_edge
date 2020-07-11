@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# 2020-07-08
+# 0003
+
+# Explicitly cached 'master entries'.
+CACHE:
+images/favicon.ico
+images/favicon_57.png
+images/favicon_72.png
+images/favicon_114.png
+images/favicon_120.png
+images/favicon_144.png
+images/favicon_152.png
+
+fonts/Cascadia.ttf
+fonts/Hind-Regular.ttf
+fonts/Hind-SemiBold.ttf
+
+braintapper.css
+global.css
+bundle.css
+stylesheets/highlight.js/monokai-sublime.css
+stylesheets/quill/quill.table-ui.css
+
+bundle.js
+javascripts/update_cache.js
+javascripts/pouchdb/pouchdb.min.js
+javascripts/pouchdb/pouchdb.find.min.js
+javascripts/umbrella.min.js
+javascripts/quill/quill.js
+javascripts/quill/markdownShortcuts.js
+javascripts/highlight.pack.js
