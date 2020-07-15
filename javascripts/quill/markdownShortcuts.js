@@ -56,6 +56,75 @@ MarkdownShortcuts = (function() {
       that = this;
       this.matches = [
         {
+          name: 'hr-dash',
+          pattern: /^([-*]\s?){3}/g,
+          action: function(text,
+        selection) {
+            var startIndex;
+            startIndex = selection.index - text.length;
+            setTimeout((function() {
+              that.quill.deleteText(startIndex,
+        text.length);
+              that.quill.insertEmbed(startIndex + 1,
+        'hr',
+        true,
+        "user");
+              that.quill.insertText(startIndex + 2,
+        '\n',
+        "silent");
+              that.quill.setSelection(startIndex + 2,
+        "silent");
+            }),
+        0);
+          }
+        },
+        {
+          name: 'hr-underscore',
+          pattern: /^([_*]\s?){3}/g,
+          action: function(text,
+        selection) {
+            var startIndex;
+            startIndex = selection.index - text.length;
+            setTimeout((function() {
+              that.quill.deleteText(startIndex,
+        text.length);
+              that.quill.insertEmbed(startIndex + 1,
+        'hr',
+        true,
+        "user");
+              that.quill.insertText(startIndex + 2,
+        '\n',
+        "silent");
+              that.quill.setSelection(startIndex + 2,
+        "silent");
+            }),
+        0);
+          }
+        },
+        {
+          name: 'hr-asterisk',
+          pattern: /^([_*]\s?){3}/g,
+          action: function(text,
+        selection) {
+            var startIndex;
+            startIndex = selection.index - text.length;
+            setTimeout((function() {
+              that.quill.deleteText(startIndex,
+        text.length);
+              that.quill.insertEmbed(startIndex + 1,
+        'hr',
+        true,
+        "user");
+              that.quill.insertText(startIndex + 2,
+        '\n',
+        "silent");
+              that.quill.setSelection(startIndex + 2,
+        "silent");
+            }),
+        0);
+          }
+        },
+        {
           name: 'header',
           pattern: /^(#){1,6}\s/g,
           action: function(text,
@@ -273,31 +342,6 @@ MarkdownShortcuts = (function() {
         false);
               that.quill.insertText(that.quill.getSelection(),
         ' ');
-            }),
-        0);
-          }
-        },
-        {
-          name: 'hr',
-          pattern: /^([-*]\s?){3}/g,
-          action: function(text,
-        selection) {
-            var startIndex;
-            console.error("insert hr");
-            startIndex = selection.index - text.length;
-            setTimeout((function() {
-              that.quill.deleteText(startIndex,
-        text.length);
-              // that.quill.insertEmbed startIndex + 1, 'hr', true, _quill2.default.sources.USER
-              that.quill.insertEmbed(startIndex + 1,
-        'hr',
-        true,
-        "user"); //_quill2.default.sources.USER
-              that.quill.insertText(startIndex + 2,
-        '\n',
-        "silent");
-              that.quill.setSelection(startIndex + 2,
-        "silent");
             }),
         0);
           }
