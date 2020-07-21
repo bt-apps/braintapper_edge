@@ -1,14 +1,53 @@
+:root {
+  --background-light: var(--white);
+  --background-dark: var(--black);
+  --foreground-light: var(--black);
+  --foreground-dark: var(--lightest-gray);
+  --tooltip-background: var(--black);
+  --tooltip-foreground: var(--foreground-dark); }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tooltip-background: var(--dark-gray);
+      --tooltip-foreground: var(--foreground-dark); } }
+
+@media (prefers-color-scheme: dark) {
+  a, a:hover, a:visited, a:active {
+    color: var(--foreground-dark); } }
+
 [type="form"] {
   padding: var(--spacing-s); }
 
 span[spacer] {
   padding: 0px 4px; }
 
-/* tippy */
-:root {
-  --tooltip-background: #333333;
-  --tooltip-foreground: #ffffff; }
+ul[role="menu"] {
+  width: 100%; }
+  ul[role="menu"] hr {
+    border: none;
+    border-bottom: 1px solid var(--lightest-gray);
+    margin-top: 3px; }
+  ul[role="menu"] li {
+    min-height: 32px; }
+    ul[role="menu"] li div {
+      padding: 6px 12px; }
+    ul[role="menu"] li button {
+      display: inline;
+      border-radius: 0px;
+      width: 100%;
+      background: transparent;
+      text-align: left; }
+      ul[role="menu"] li button[indent] {
+        border-radius: 4px;
+        width: auto;
+        font-weight: bold; }
+        ul[role="menu"] li button[indent]:first-of-type {
+          margin-left: 2px; }
+      ul[role="menu"] li button[disabled] {
+        color: var(--light-gray); }
+      ul[role="menu"] li button:hover {
+        background: var(--lightest-gray); }
 
+/* tippy */
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0; }
 
@@ -23,37 +62,35 @@ span[spacer] {
   font-size: 12px;
   line-height: 1.4;
   outline: 0;
-  transition-property: transform,visibility,opacity; }
-  .tippy-box[data-placement^=top] > .tippy-arrow {
-    bottom: 0; }
-    .tippy-box[data-placement^=top] > .tippy-arrow:before {
-      bottom: -7px;
-      left: 0;
-      border-width: 8px 8px 0;
-      border-top-color: initial;
-      transform-origin: center top; }
+  transition-property: transform,visibility,opacity;
+  bottom: 0;
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top; }
   .tippy-box[data-placement^=bottom] > .tippy-arrow {
     top: 0; }
-    .tippy-box[data-placement^=bottom] > .tippy-arrow:before {
-      top: -7px;
-      left: 0;
-      border-width: 0 8px 8px;
-      border-bottom-color: initial;
-      transform-origin: center bottom; }
+  .tippy-box:before {
+    top: -7px;
+    left: 0;
+    border-width: 0 8px 8px;
+    border-bottom-color: initial;
+    transform-origin: center bottom; }
   .tippy-box[data-placement^=left] > .tippy-arrow {
     right: 0; }
-    .tippy-box[data-placement^=left] > .tippy-arrow:before {
-      border-width: 8px 0 8px 8px;
-      border-left-color: initial;
-      right: -7px;
-      transform-origin: center left; }
+  .tippy-box:before {
+    border-width: 8px 0 8px 8px;
+    border-left-color: initial;
+    right: -7px;
+    transform-origin: center left; }
   .tippy-box[data-placement^=right] > .tippy-arrow {
     left: 0; }
-    .tippy-box[data-placement^=right] > .tippy-arrow:before {
-      left: -7px;
-      border-width: 8px 8px 8px 0;
-      border-right-color: initial;
-      transform-origin: center right; }
+  .tippy-box:before {
+    left: -7px;
+    border-width: 8px 8px 8px 0;
+    border-right-color: initial;
+    transform-origin: center right; }
   .tippy-box[data-inertia][data-state=visible] {
     transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11); }
 
@@ -71,3 +108,19 @@ span[spacer] {
   position: relative;
   padding: 5px 9px;
   z-index: 1; }
+
+.tippy-box[data-theme="datepicker"], .tippy-box[data-theme="menu"] {
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 0;
+  width: 240px; }
+
+.tippy-box[data-theme="menu"] .tippy-content {
+  padding: 0px; }
+
+.tippy-box[data-theme="menu"] ul[role="menu"] hr {
+  border: none;
+  border-bottom: 1px solid var(--lightest-gray); }
+
+.tippy-box[data-theme="menu"] ul[role="menu"] li button {
+  min-height: 32px; }

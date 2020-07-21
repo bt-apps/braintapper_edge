@@ -9143,21 +9143,34 @@ hr {
     display: none !important; } }
 
 @font-face {
-  font-family: Hind;
-  src: url("./fonts/Hind-Regular.ttf");
+  font-family: NunitoSans;
+  src: url("/fonts/NunitoSans-Regular.ttf");
   font-weight: normal; }
 
 @font-face {
-  font-family: Hind;
-  src: url("./fonts/Hind-SemiBold.ttf");
+  font-family: NunitoSans;
+  src: url("/fonts/NunitoSans-Bold.ttf");
   font-weight: bold; }
 
+@font-face {
+  font-family: NunitoSans;
+  src: url("/fonts/NunitoSans-Regular.ttf");
+  font-weight: normal; }
 
+@font-face {
+  font-family: NunitoSans;
+  src: url("/fonts/NunitoSans-Bold.ttf");
+  font-weight: bold; }
 
 @font-face {
   font-family: Cascadia;
-  src: url("./fonts/Cascadia.ttf");
+  src: url("/fonts/Cascadia.ttf");
   font-weight: normal; }
+
+@font-face {
+  font-family: Cascadia;
+  src: url("/fonts/Cascadia.ttf");
+  font-weight: bold; }
 
 body {
   font-family: var(--font-family-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -9547,6 +9560,10 @@ label[type="tag"] {
   --darkest-red: #c92a2a;
   --black: var(--darkest-gray);
   --white: #ffffff;
+  --background-light: var(--white);
+  --background-dark: var(--black);
+  --foreground-light: var(--black);
+  --foreground-dark: var(--white);
   --input-border: var(--light-gray);
   --menu-border: var(--light-gray);
   --box-shadow: var(--light-gray);
@@ -9598,10 +9615,10 @@ label[type="tag"] {
   --menu-hover: var(--white);
   --menu-active: var(--white);
   --menu-disabled: var(--white);
-  --font-family-primary: Hind;
-  --font-family-primary-bold: Hind;
-  --font-family-secondary: Hind;
-  --font-family-secondary-bold: Hind;
+  --font-family-primary: NunitoSans;
+  --font-family-primary-bold: NunitoSans;
+  --font-family-secondary: NunitoSans;
+  --font-family-secondary-bold: NunitoSans;
   --font-family-monospace: Cascadia;
   --font-family-monospace-bold: Cascadia;
   --font-normal: normal;
